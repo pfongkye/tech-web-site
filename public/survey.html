@@ -9,11 +9,11 @@
         <h1 id="title">Survey</h1>
         <p id="description">A sample survey.</p>
         <form id="survey-form">
-            <label id="name-label" for="name">Name:</label><input id="name" required placeholder="Your Name">
-            <label id="email-label" for="email">Email:</label><input id="email" type="email" placeholder="Your Email">
+            <label id="name-label" for="name">Name:</label><input id="name" required placeholder="Your Name" name="name">
+            <label id="email-label" for="email">Email:</label><input id="email" type="email" placeholder="Your Email" name="email">
             <label id="number-label" for="age">Age:</label><input id="age" type="number" min="0" max="120"
-                placeholder="Your Age">
-            <label id="gender-label" for="gender">Gender:</label><select id="gender">
+                placeholder="Your Age" name="age">
+            <label id="gender-label" for="gender">Gender:</label><select id="gender" name="gender">
                 <option>Male</option>
                 <option>Female</option>
                 <option>Prefer not to say</option>
@@ -21,8 +21,8 @@
             <fieldset id="nutrition" name="nutrition">
                 <legend>Nutrition</legend>
                 <label id="vegan-label" for="vegan"><input id="vegan" type="radio" checked
-                        name="nutrition">Vegan</label>
-                <label id="meat-eater-label" for="meat-eater"><input id="meat-eater" type="radio" name="nutrition">Meat
+                        name="nutrition" value="nutrition">Vegan</label>
+                <label id="meat-eater-label" for="meat-eater" value="meat-eater"><input id="meat-eater" type="radio" name="nutrition">Meat
                     Eater</label>
             </fieldset>
             <fieldset id="sport" name="sport">
@@ -32,6 +32,7 @@
                 <label id="football-label" for="football"><input id="football" type="checkbox" name="sport"
                         value="football">Crossfit</label>
             </fieldset>
+            <label id="comment-label" for="comment">Comments:</label><textarea id="comment" name="comment"
             <button id="submit" value="submit">Submit</button>
         </form>
     </main>
@@ -55,6 +56,6 @@
 
     form>button#submit {
         grid-column: 1/3;
-        align-self: center;
+        justify-self: center;
     }
 </style>
