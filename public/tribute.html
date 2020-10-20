@@ -7,16 +7,29 @@
 <body>
     <main id="main">
         <section>
-        <h2 id="title">Dr. Albert Einstein</h2>
-        <!--add width and height to avoid size jumps-->
-        <div id="img-div"><img id="image"
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" width="300" height="400">
-            <caption id="img-caption">Albert Einstein Photography</caption>
-        </div>
-        <p id="tribute-info">
-            This is a small description of the life of the famous physicist Albert Einstein (to be completed...).
-            For more information, follow the given <a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank">link</a>. 
-        </p>
+            <h2 id="title">Dr. Albert Einstein</h2>
+            <!--add width and height to avoid size jumps-->
+            <div id="img-div"><img id="image"
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" width="300"
+                    height="400">
+                <caption id="img-caption">Albert Einstein Photography</caption>
+            </div>
+            <p id="tribute-info">
+                This is a small description of the life of the famous physicist Albert Einstein (to be completed...).
+                For more information, follow the given <a href="https://en.wikipedia.org/wiki/Albert_Einstein"
+                    target="_blank">link</a>.
+            </p>
         </section>
     </main>
 </body>
+<style>
+    #img-div {
+        max-width: 50em;
+    }
+
+    #img-div>#image {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+</style>
