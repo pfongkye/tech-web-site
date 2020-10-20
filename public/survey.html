@@ -18,17 +18,21 @@
                 <option>Female</option>
                 <option>Prefer not to say</option>
             </select>
-            <label id="nutrition-label" for="nutrition">Nutrition:</label>
             <fieldset id="nutrition" name="nutrition">
-                <legend>Nutrition:</legend>
-                <label id="vegan-label" for="vegan"><input id="vegan" type="radio" checked name="nutrition">Vegan</label>
-                <label id="meat-eater-label" for="meat-eater"><input id="meat-eater" type="radio" name="nutrition">Meat Eater</label>
+                <legend>Nutrition</legend>
+                <label id="vegan-label" for="vegan"><input id="vegan" type="radio" checked
+                        name="nutrition">Vegan</label>
+                <label id="meat-eater-label" for="meat-eater"><input id="meat-eater" type="radio" name="nutrition">Meat
+                    Eater</label>
             </fieldset>
             <fieldset id="sport" name="sport">
                 <legend>Sport</legend>
-                <label id="crossfit-label" for="crossfit"><input id="crossfit" type="checkbox" name="sport" value="crossfit"></label>
-                <label id="football-label" for="football"><input id="football" type="checkbox" name="sport" value="football"></label>
+                <label id="crossfit-label" for="crossfit"><input id="crossfit" type="checkbox" name="sport"
+                        value="crossfit">Crossfit</label>
+                <label id="football-label" for="football"><input id="football" type="checkbox" name="sport"
+                        value="football">Crossfit</label>
             </fieldset>
+            <button id="submit" value="submit">Submit</button>
         </form>
     </main>
 </body>
@@ -43,5 +47,14 @@
 
     form>*+* {
         margin-top: 1em;
+    }
+
+    form>fieldset {
+        grid-column: 2;
+    }
+
+    form>button#submit {
+        grid-column: 1/3;
+        align-self: center;
     }
 </style>
