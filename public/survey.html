@@ -9,7 +9,15 @@
         <h1 id="title">Survey</h1>
         <p id="description">A sample survey.</p>
         <form id="survey-form">
-            <label for="name" name="name">Name:</label><input id="name" required>
+            <label id="name-label" for="name">Name:</label><input id="name" required placeholder="Your Name">
+            <label id="email-label" for="email">Email:</label><input id="email" type="email" placeholder="Your Email">
+            <label id="number-label" for="age">Age:</label><input id="age" type="number" min="0" max="120"
+                placeholder="Your Age">
+            <label id="gender-label" for="gender">Gender:</label><select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not to say</option>
+            </select>
         </form>
     </main>
 </body>
