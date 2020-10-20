@@ -23,7 +23,11 @@
 </body>
 <style>
     form {
-        display:grid;
-        grid-template-columns: 1fr 2fr;
+        display: grid;
+        grid-template-columns: auto minmax(auto, 250px);
+    }
+
+    form>*+* {
+        margin-top: 1em;
     }
 </style>
