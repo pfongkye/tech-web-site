@@ -12,7 +12,7 @@
     <div id="App"></div>
 </body>
 <script type="text/babel">
-    const MyComponent = <button onClick={() => console.log("Hello world")}>Click Me</button>
+    const MyComponent = () => <button onClick={() => console.log("Hello world")}>Click Me</button>
     //ReactDOM.render(type, props, children)
     ReactDOM.render(<MyComponent />, document.getElementById("App"));
 </script>
