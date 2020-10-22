@@ -12,7 +12,8 @@
     <div id="App"></div>
 </body>
 <script type="text/babel">
-    const MyComponent = () => <button onClick={() => console.log("Hello world")}>Click Me</button>
+    const e = React.createElement;
+    const MyComponent = () => <button onClick={() => console.log("Hello world")}>{e("div", null, "Click Me!!!")}</button>
     //ReactDOM.render(type, props, children)
     ReactDOM.render(<MyComponent />, document.getElementById("App"));
 </script>
