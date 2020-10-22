@@ -13,9 +13,9 @@
 </body>
 <script type="text/babel">
     const e = React.createElement;
-    // const MyComponent = e('button', { click: () => console.log("Hello") }, 'Hello world');
+    const MyComponent = e('button', { click: () => console.log("Hello") }, 'Hello world');
     //ReactDOM.render(type, props, children)
-    ReactDOM.render(<div>Hello world</div>, document.getElementById("App"));
+    ReactDOM.render(<MyComponent/>, document.getElementById("App"));
 </script>
 
 </html>
