@@ -24,8 +24,9 @@
         <form id="form" title="Feedback on landing page">
             <label id="email-label" for="email">Email: <input id="email" name="email" type="email"
                     placeholder="Enter your email"></label>
-            <label id="submit-label" for="submit">Submit: <input id="submit" name="submit" type="submit"
-                    src="https://www.freecodecamp.com/email-submit"></label>
+            <!--the attribute formaction is used to indicate the URL to which to submit the data-->
+            <input id="submit" name="submit" type="submit" value="Submit email"
+                formaction="https://www.freecodecamp.com/email-submit">
         </form>
     </main>
     <aside id="aside">Aside</aside>
