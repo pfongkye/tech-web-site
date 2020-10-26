@@ -31,7 +31,7 @@
                     formaction="https://www.freecodecamp.com/email-submit">
             </form>
         </main>
-        <aside id="aside">Aside</aside>
+        <aside id="aside">Some comments to add</aside>
         <footer id="footer">Built with plain HTML and CSS</footer>
     </div>
 </body>
@@ -39,16 +39,22 @@
     #container {
         display: grid;
         grid-template-areas:
-            "header header"
-            "main aside"
-            "main aside"
-            "footer footer";
+            "header header header"
+            "main main aside"
+            "main main aside"
+            "footer footer footer";
+    }
+
+    @media (max-width:450px) {
+        #aside {
+            display: none;
+        }
     }
 
     #header {
         display: flex;
         flex-direction: column;
-        grid-area: "header";
+        grid-area: header;
     }
 
     #header>nav>ul {
@@ -69,15 +75,16 @@
     }
 
     #main {
-        grid-area: "main";
+        grid-area: main;
+        height: 70vh;
     }
 
     #aside {
-        grid-area: "aside";
+        grid-area: aside;
     }
 
     #footer {
-        grid-area: "footer";
+        grid-area: footer;
     }
 </style>
 
