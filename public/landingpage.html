@@ -3,14 +3,16 @@
 
 <head lang="en">
     <!--meta is a metadata tag element. In this case, use meta viewport to control the viewport size on mobile devices so that site is responsive
-    by using media queries (since virtual viewport can be greater than value given by media query)-->
+    by using media queries (since virtual viewport can be greater than value given by media query)
+    link: https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div id="container">
         <header id="header">
-            <!--assign width and height attributes to mitigate content layout shift -->
+            <!--assign width and height attributes to mitigate content layout shift.
+            More details: https://web.dev/optimize-cls/ -->
             <img id="header-img" src="assets/christmas-1920_384.jpg" width="1920" height="384" alt="chess playing game">
             <nav id="nav-bar">
                 <ul>
@@ -47,6 +49,7 @@
             "main main aside"
             "main main aside"
             "footer footer footer";
+        gap: 0.5em;
     }
 
     @media (max-width: 450px) {
@@ -85,6 +88,10 @@
     #main {
         grid-area: main;
         height: 70vh;
+    }
+
+    #main video {
+        width: 100%;
     }
 
     #aside {
