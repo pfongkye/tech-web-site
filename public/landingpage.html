@@ -7,6 +7,7 @@
 <body>
     <div id="container">
         <header id="header">
+            <!--assign width and height attributes to mitigate content layout shift -->
             <img id="header-img" src="assets/christmas-1920_384.jpg" width="1920" height="384" alt="chess playing game">
             <nav id="nav-bar">
                 <ul>
@@ -45,9 +46,15 @@
                 "main main aside"
                 "footer footer footer";
         }
+    }
+
+    @media (max-width: 449px) {
+        #container {
+            display: initial;
+        }
 
         #aside {
-            display: initial;
+            display: none;
         }
     }
 
@@ -81,7 +88,6 @@
 
     #aside {
         grid-area: aside;
-        display: none;
     }
 
     #footer {
