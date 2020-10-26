@@ -36,22 +36,18 @@
     </div>
 </body>
 <style>
-    #container {
-        display: grid;
-        grid-template-areas:
-            "header header header"
-            "main main aside"
-            "main main aside"
-            "footer footer footer";
-    }
-
-    @media (max-width: 450px) {
+    @media (min-width: 450px) {
         #container {
-            display: initial;
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "main main aside"
+                "main main aside"
+                "footer footer footer";
         }
 
         #aside {
-            display: none;
+            display: initial;
         }
     }
 
@@ -85,6 +81,7 @@
 
     #aside {
         grid-area: aside;
+        display: none;
     }
 
     #footer {
