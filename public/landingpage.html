@@ -2,6 +2,9 @@
 <html>
 
 <head lang="en">
+    <!--meta is a metadata tag element. In this case, use meta viewport to control the viewport size on mobile devices so that site is responsive
+    by using media queries (since virtual viewport can be greater than value given by media query)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -37,18 +40,16 @@
     </div>
 </body>
 <style>
-    @media (min-width: 450px) {
-        #container {
-            display: grid;
-            grid-template-areas:
-                "header header header"
-                "main main aside"
-                "main main aside"
-                "footer footer footer";
-        }
+    #container {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "main main aside"
+            "main main aside"
+            "footer footer footer";
     }
 
-    @media (max-width: 449px) {
+    @media (max-width: 450px) {
         #container {
             display: initial;
         }
