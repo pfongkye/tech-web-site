@@ -1,0 +1,9 @@
+#welcome-section {
+    height: 100vh;
+}
+
+@media (max-width:650px){
+    body {
+        background-color: paleturquoise;
+    }
+} 
