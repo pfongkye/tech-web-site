@@ -1,0 +1,18 @@
+:root {
+    box-sizing:border-box;
+}
+
+*,
+:before,
+:after {
+    box-sizing: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
