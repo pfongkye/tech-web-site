@@ -9,7 +9,8 @@
 }
 
 nav {
-    background-color: rgba(123, 231, 112, 0.7)
+    background-color: rgba(123, 231, 112, 0.7);
+    position:sticky;
 }
 nav > ul > li {
     list-style: none;
