@@ -6,8 +6,8 @@ window.onload = async function () {
     const docFragment = document.createDocumentFragment();
 
     mangaChars.characters.forEach(c => {
-        const thumbnail = document.createElement("div");
-        const caption = document.createElement("caption");
+        const thumbnail = document.createElement("figure");
+        const caption = document.createElement("figcaption");
         caption.appendChild(document.createTextNode(c.name));
         const img = document.createElement("img");
         img.setAttribute("alt", c.name);
