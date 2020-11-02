@@ -1,5 +1,19 @@
 window.onload = async function () {
-    const result = await fetch("https://api.jikan.moe/v3/manga/1/characters");
+    const app = document.getElementById("App");
+    let next = 1;
+
+    app.addEventListener("scroll", () => {
+        if (app.scrollTop > app.offsetHeight - 10) {
+            next++;
+            app.appendChild(await getThumbnails(next));
+        }
+    })
+
+    app.appendChild(await getThumbnails(next));
+}
+
+async function getThumbnails(next) {
+    const result = await fetch(`https://api.jikan.moe/v3/manga/${next}//characters`);
     const mangaChars = await result.json();
     //a document fragment is stored in memory, and not added to DOM tree -> perf optimization
     //https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment
@@ -14,7 +28,7 @@ window.onload = async function () {
         img.setAttribute("src", c.image_url);
         thumbnail.append(caption, img);
         docFragment.append(thumbnail);
-    })
+    });
 
-    document.getElementById("App").appendChild(docFragment);
+    return docFragment;
 }
