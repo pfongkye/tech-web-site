@@ -3,8 +3,6 @@ window.onload = async function () {
     let next = 1;
 
     window.addEventListener("scroll", async () => {
-        console.log("offsetHeight", app.offsetHeight);
-        console.log("height", app.getBoundingClientRect().height);
         if (window.scrollY > app.offsetHeight - window.visualViewport) {
             next++;
             app.appendChild(await getThumbnails(next));
