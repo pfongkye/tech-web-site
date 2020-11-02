@@ -26,7 +26,7 @@ async function getThumbnails(next) {
         const img = document.createElement("img");
         img.setAttribute("alt", c.name);
         img.setAttribute("src", c.image_url);
-        thumbnail.append(caption, img);
+        thumbnail.append(img, caption);
         docFragment.append(thumbnail);
     });
 
