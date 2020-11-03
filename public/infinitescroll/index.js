@@ -1,12 +1,21 @@
 window.onload = async function () {
     const app = document.getElementById("App");
-    let next = 1;
+    let next = 1, isComputing = false;
 
     window.addEventListener("scroll", async () => {
-        if (window.scrollY > app.offsetHeight - window.visualViewport.height) {
-            next++;
-            app.appendChild(await getThumbnails(next));
+        //If computation is expensive, throttle the event
+        //https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
+        if (!isComputing) {
+            setTimeout(() => {
+                isComputing = true;
+                if (window.scrollY > app.offsetHeight - window.visualViewport.height) {
+                    next++;
+                    app.appendChild(await getThumbnails(next));
+                }
+                isComputing = false;
+            }, 500);
         }
+
     })
 
     app.appendChild(await getThumbnails(next));
