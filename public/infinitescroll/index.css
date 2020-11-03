@@ -10,3 +10,20 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
+
+#App figure {
+    margin:0;
+    display:flex;
+    flex-direction:column;
+}
+
+#App figure > figcaption {
+    margin-top: -1.1em;
+    background-color: rgba(175,175,175,.9);
+    color: aliceblue;
+    width: 100%;
+}
+
+#App figure > img {
+    object-fit: cover;
+}
