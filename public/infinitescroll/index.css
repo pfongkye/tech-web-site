@@ -12,7 +12,7 @@
 }
 
 #App figure {
-    margin:0;
+    margin: 0.25em;
     display:flex;
     flex-direction:column;
 }
