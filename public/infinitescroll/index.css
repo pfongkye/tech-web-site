@@ -1,0 +1,12 @@
+:root {
+    box-sizing: border-box;
+}
+
+*,:before,:after {
+    box-sizing: inherit;
+}
+
+#App {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
