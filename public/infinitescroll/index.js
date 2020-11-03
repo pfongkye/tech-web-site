@@ -2,11 +2,11 @@ window.onload = async function () {
     const app = document.getElementById("App");
     let next = 1, isComputing = false;
 
-    window.addEventListener("scroll", async () => {
+    window.addEventListener("scroll", () => {
         //If computation is expensive, throttle the event
         //https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
         if (!isComputing) {
-            setTimeout(() => {
+            setTimeout(async () => {
                 isComputing = true;
                 if (window.scrollY > app.offsetHeight - window.visualViewport.height) {
                     next++;
